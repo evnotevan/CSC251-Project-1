@@ -10,7 +10,7 @@ public class Policy {
     private int height;
     private int weight;
 
-    // No-arg constructor with default values
+    
     public Policy() {
         this.policyNumber = "";
         this.providerName = "";
@@ -22,7 +22,6 @@ public class Policy {
         this.weight = 0;
     }
 
-    // Constructor with arguments to fully initialize the Policy object
     public Policy(String policyNumber, String providerName, String firstName, String lastName,
                   int age, String smokingStatus, int height, int weight) {
         this.policyNumber = policyNumber;
@@ -35,7 +34,6 @@ public class Policy {
         this.weight = weight;
     }
 
-    // Getters and setters for each attribute
     public String getPolicyNumber() {
         return policyNumber;
     }
@@ -100,17 +98,14 @@ public class Policy {
         this.weight = weight;
     }
 
-    // Method to calculate and return the BMI of the policyholder
     public double calculateBMI() {
         return (weight * 703.0) / (height * height);
     }
 
-    // Method to calculate and return the price of the insurance policy
     public double calculateInsurancePrice() {
         double additionalFee = (calculateBMI() - 35) * 20;
         double baseFee = 600;
 
-        // Additional fees based on age, smoking status, and BMI
         if (age > 50) {
             baseFee += 75;
         }
@@ -128,7 +123,6 @@ public class PolicyDemo {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Get user input
         System.out.println("Enter Policy Information:");
         System.out.print("Policy Number: ");
         String policyNumber = scanner.nextLine();
@@ -145,7 +139,7 @@ public class PolicyDemo {
         System.out.print("Age: ");
         int age = scanner.nextInt();
 
-        scanner.nextLine(); // Consume the newline character
+        scanner.nextLine(); 
 
         System.out.print("Smoking Status (smoker/non-smoker): ");
         String smokingStatus = scanner.nextLine().toLowerCase();
@@ -156,10 +150,8 @@ public class PolicyDemo {
         System.out.print("Weight (in pounds): ");
         int weight = scanner.nextInt();
 
-        // Create an instance of the Policy class with user input
         Policy policy = new Policy(policyNumber, providerName, firstName, lastName, age, smokingStatus, height, weight);
 
-        // Display policy information
         System.out.println("\nPolicy Information:");
         System.out.println("Policy Number: " + policy.getPolicyNumber());
         System.out.println("Provider Name: " + policy.getProviderName());
