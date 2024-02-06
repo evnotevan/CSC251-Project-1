@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+
 /**
  * The Policy class represents an insurance policy with various attributes.
  */
@@ -102,17 +103,6 @@ public class Policy {
     }
 }
 
-/**
- * The PolicyDemo class contains the main method for user input and displaying policy information.
- */
-public class PolicyDemo {
 
-    /**
-     * The main method takes user input to create a Policy object and displays its information.
-     *
-     * @param args Command line arguments (not used in this program).
-     */
-    public static void main(String[] args) {
-        // ...
-    }
-}
+
+
