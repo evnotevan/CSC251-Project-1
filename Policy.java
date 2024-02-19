@@ -42,4 +42,14 @@ public class Policy {
     public void setPremiumAmount(double premiumAmount) {
         this.premiumAmount = premiumAmount;
     }
+@Override
+public String toString() {
+    return "Policy{" +
+            "policyNumber='" + policyNumber + '\'' +
+            ", providerName='" + providerName + '\'' +
+            ", coverageAmount=" + coverageAmount +
+            ", premiumAmount=" + premiumAmount +
+            '}';
+}
+
 }

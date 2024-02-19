@@ -14,10 +14,9 @@ public class PolicyHolder {
         this.smokingStatus = smokingStatus;
         this.height = height;
         this.weight = weight;
-        this.policy = new Policy(); // Assuming a default policy for now
+        this.policy = new Policy(); 
     }
 
-    // Getters and setters for the PolicyHolder attributes
 
     public String getFirstName() {
         return firstName;
@@ -96,5 +95,18 @@ public class PolicyHolder {
         return baseFee + additionalFee;
     }
 
-    // Other methods related to PolicyHolder can be added here
+    
+@Override
+public String toString() {
+    return "PolicyHolder{" +
+            "firstName='" + firstName + '\'' +
+            ", lastName='" + lastName + '\'' +
+            ", age=" + age +
+            ", smokingStatus='" + smokingStatus + '\'' +
+            ", height=" + height +
+            ", weight=" + weight +
+            ", policy=" + policy +
+            '}';
+}
+
 }
