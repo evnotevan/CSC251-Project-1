@@ -51,5 +51,8 @@ public String toString() {
             ", premiumAmount=" + premiumAmount +
             '}';
 }
+public static int getPolicyCount() {
+        return policyCount;
+    }
 
 }
