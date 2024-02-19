@@ -24,10 +24,9 @@ public class Demo {
 
         
                  
-        for (Policy policy : policies) {
-            System.out.println(policy.toString());
-        }
-    }
+       for (Policy policy : policies) {
+    System.out.println(policy); // Implicitly calls toString() method
+}    }
 
     private static List<Policy> readPoliciesFromFile(String filename) {
         List<Policy> policies = new ArrayList<>();
